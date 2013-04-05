@@ -1,0 +1,23 @@
+Options:
+#Login Prefix:
+	loginsk.prefix: [<cyan>System<reset>]
+	loginsk.language: En
+	
+	
+#Other:
+	loginsk.script.name: Login
+	loginsk.version: V1.2
+	
+	
+	
+	
+	
+	
+
+#----------------------------------------------#
+On Script Load:
+	set {loginsk.prefix} to "{@loginsk.prefix}"
+	set {loginsk.language} to "{@loginsk.language}"
+	
+	set {loginsk.script.name} to "{@loginsk.script.name}"
+	set {loginsk.version} to "{@loginsk.version}"

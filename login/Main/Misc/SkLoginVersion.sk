@@ -1,0 +1,7 @@
+Command /SkLoginVersion:
+	description: Shows version of SkLogin.
+	permission: server.sklogin.version
+	executable by: players and console
+	aliases: SkLoginVersion
+	trigger:
+		Send "%{loginsk.prefix}% SkLoginVersion: %{loginsk.version}%" to player

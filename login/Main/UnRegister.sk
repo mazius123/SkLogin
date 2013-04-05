@@ -1,0 +1,11 @@
+command /UnRegister <text>:
+	usage: /UnRegister <password>
+	trigger:
+		If {login.%player%.pass} is not set:
+			message "%{loginsk.prefix}% %{login.%{loginsk.language}%.msg4}%" 
+		If arg 1 is {login.%player%.pass}:
+			message "%{loginsk.prefix}% %{login.%{loginsk.language}%.msg5}%"
+			delete {login.%player%.pass}
+			delete {login.%player%.logged}
+		Else:
+			message "%{loginsk.prefix}% %{login.%{loginsk.language}%.msg6}%"

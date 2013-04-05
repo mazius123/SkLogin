@@ -1,0 +1,9 @@
+On Skript Start:
+	If {loginsk.script.name} is set:
+		send "%{loginsk.prefix}% LoginV1.2 sucessfuly started." to console
+	Else:
+		send "%{loginsk.prefix}% LoginV1.2 sucessfuly installed!" to console
+		
+On Skript Stop:
+	send "%{loginsk.prefix}% LoginV1.2 sucessfuly disabled" to console
+	

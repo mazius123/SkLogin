@@ -1,0 +1,7 @@
+command /ReloadLang:
+	trigger:
+		loop 16 times:
+			add 1 to {_msg}
+			delete {login.en.msg%{_msg}%}
+		make console execute command "sk reload login/lang/en"
+		message "Success!"

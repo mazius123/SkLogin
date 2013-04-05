@@ -1,0 +1,8 @@
+command /LogOut [<text>]:
+	trigger:
+		If arg 1 is "-n":
+			set {login.%player%.logged} to false
+			message "%{loginsk.prefix}% %{login.%{loginsk.language}%.msg10}%"
+		Else:
+			set {login.%player%.logged} to false
+			kick player

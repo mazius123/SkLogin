@@ -1,0 +1,16 @@
+command /Login <text>:
+	usage: /Login <password>
+	trigger:
+		If {login.%player%.pass} is not set:
+			message "%{loginsk.prefix}% %{login.%{loginsk.language}%.msg7}%"
+		Else:
+			If arg 1 is {login.%player%.pass}:
+				set {login.%player%.logged} to true
+				message "%{loginsk.prefix}% %{login.%{loginsk.language}%.msg8}%"
+				delete {login.%player%.loc}
+			Else:
+				message "%{loginsk.prefix}% %{login.%{loginsk.language}%.msg9}%"
+				add 1 to {login.%player%.attempt}
+				{login.%player%.attempt} is 5
+				delete {login.%player%.attempt}
+				kick player

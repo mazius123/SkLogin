@@ -1,0 +1,38 @@
+On Join:
+	set {login.%player%.logged} to false
+	If {login.%player%.loc} is set:
+		teleport player to {login.%player%.loc}
+	Else:
+		set {login.%player%.loc} to location of player
+	If {login.%player%.pass} is not set:
+		message "%{loginsk.prefix}% %{login.%{loginsk.language}%.msg13}%"
+		message "%{loginsk.prefix}% %{login.%{loginsk.language}%.msg14}%"
+	Else:
+		message "%{loginsk.prefix}% %{login.%{loginsk.language}%.msg15}%"
+On Quit:
+	delete {login.%player%.attempt}
+On Chat:
+	If {login.%player%.logged} is false:
+		message "%{loginsk.prefix}% %{login.%{loginsk.language}%.msg16}%"
+		Cancel Event
+On Click:
+	If {login.%player%.logged} is false:
+		message "%{loginsk.prefix}% %{login.%{loginsk.language}%.msg16}%"
+		Cancel Event
+On Command:
+	If command is "login" or "register":
+		Stop Trigger
+	If {login.%player%.logged} is false:
+		message "%{loginsk.prefix}% %{login.%{loginsk.language}%.msg16}%" to player		
+		Cancel Event
+On Damage of player:
+	If {login.%victim%.logged} is false:
+		message "%{loginsk.prefix}% %{login.%{loginsk.language}%.msg17}%" to attacker
+		Cancel Event
+On Drop:
+	If {login.%player%.logged} is false:
+		message "%{loginsk.prefix}% %{login.%{loginsk.language}%.msg16}%"
+		Cancel Event
+On Hunger meter change:
+	If {login.%player%.logged} is false:
+		Cancel Event

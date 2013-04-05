@@ -1,0 +1,22 @@
+variables:
+#[un]Register
+	{login.en.msg1} = "This account has already been registered."
+	{login.en.msg2} = "Please login with /login <password>"
+	{login.en.msg3} = "Congrats, you have successfully registered!"
+	{login.en.msg4} = "This account has never been registered."
+	{login.en.msg5} = "Successfully unregistered, we are sad to see you go."
+	{login.en.msg6} = "Incorrect password!"
+	{login.en.msg7} = "This account has not been registered. Please register with /register <password>"
+#log in/out
+	{login.en.msg8} = "Login Successful!"
+	{login.en.msg9} = "The password you have entered is incorrect."
+	{login.en.msg10} = "Logout Successful!"
+#change password
+	{login.en.msg11} = "Password has been changed successfully!"
+	{login.en.msg12} = "You have entered an incorrect password."
+#core
+	{login.en.msg13} = "Welcome to my server. This server has online mode disabled. Due to this fact, you will need to create a login password."
+	{login.en.msg14} = "This can be done by typing /register <password>. When this is complete, in the future, you can login by typing /login <password>"
+	{login.en.msg15} = "Welcome back! Please login to continue."
+	{login.en.msg16} = "You have not yet logged in."
+	{login.en.msg17} = "This player has not yet logged in, please hold."

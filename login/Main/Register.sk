@@ -1,0 +1,10 @@
+command /Register <text>:
+	usage: /Register <password>
+	trigger:
+		If {login.%player%.pass} is set:
+			message "%{loginsk.prefix}% %{login.%{loginsk.language}%.msg1}%" 
+			message "%{loginsk.prefix}% %{login.%{loginsk.language}%.msg2}%"
+		Else:
+			set {login.%player%.pass} to arg 1
+			message "%{loginsk.prefix}% %{login.%{loginsk.language}%.msg3}%"
+			make player execute command "/login %arg 1%"
