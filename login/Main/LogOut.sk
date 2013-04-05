@@ -1,8 +1,12 @@
 command /LogOut [<text>]:
+	description: logout player from authentication system.
+	permission: sklogin.logout
+#	aliases: 
+ 	executable by: players
 	trigger:
 		If arg 1 is "-n":
 			set {login.%player%.logged} to false
 			message "%{loginsk.prefix}% %{login.%{loginsk.language}%.msg10}%"
 		Else:
 			set {login.%player%.logged} to false
-			kick player
+			kick player due to "%{loginsk.prefix}% Sucessfuly logged off"
