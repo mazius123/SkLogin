@@ -1,3 +1,8 @@
+On Skript Start:
+	add {loginsk.script.name} to {server.scripts::*}
+On Skript Stop:
+	remove {loginsk.script.name} from {server.scripts::*}
+
 On Join:
 	set {login.%player%.logged} to false
 	If {login.%player%.loc} is set:
